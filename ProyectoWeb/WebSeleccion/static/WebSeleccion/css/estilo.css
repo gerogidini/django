@@ -1,0 +1,94 @@
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+/* Imagenes de fondo */
+#fondoHome {
+	padding: 50px;
+	background-image: url(../images/afafondo.jpg);
+	min-height: 400px;
+	width: 100%;
+	overflow: auto;
+	text-align: center;
+}
+
+#fondoJugadores {
+	padding: 50px;
+	background-image: url(../images/jugadores.jpg);
+	background-size: cover; 
+	min-height: 400px;
+	width: 100%;
+	overflow: auto;
+}
+
+/* Contenedores del home y titulos */
+
+.contenedorTexto {
+	padding: 10px;
+	margin: 50px;
+	background-color: white;
+	min-height: 250px;
+	width: 450px;
+	display: inline-flex;
+	font-size: 30px;
+	
+}
+
+#mundiales {
+	background-image: url(../images/titulos.jpg);
+	background-size: cover;
+	color: white;
+	text-align: center;
+}
+
+#copas {
+	background-image: url(../images/copaAmerica.jpeg);
+	background-size: cover;
+	color: white;
+}
+
+/* Bootstrap de footer */
+
+.footer-dark {
+  padding:50px 0;
+  color:#f0f9ff;
+  background-color:#282d32;
+}
+
+.footer-dark .item.social {
+  text-align:center;
+}
+
+@media (max-width:991px) {
+  .footer-dark .item.social {
+    text-align:center;
+    margin-top:20px;
+  }
+}
+
+.footer-dark .item.social > a {
+  font-size:20px;
+  width:36px;
+  height:36px;
+  line-height:36px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+  margin:0 8px;
+  color:#fff;
+  opacity:0.75;
+}
+
+.footer-dark .item.social > a:hover {
+  opacity:0.9;
+}
+
+.footer-dark .copyright {
+  text-align:center;
+  padding-top:24px;
+  opacity:0.3;
+  font-size:13px;
+  margin-bottom:0;
+}
