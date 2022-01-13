@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse
-from .models import Jugador
+from .models import Jugador, Titulo
 
 # Create your views here.
 

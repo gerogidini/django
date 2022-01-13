@@ -11,6 +11,7 @@ html, body {
 	width: 100%;
 	overflow: auto;
 	text-align: center;
+	float: left;
 }
 
 #fondoJugadores {
@@ -30,7 +31,7 @@ html, body {
 	background-color: white;
 	min-height: 250px;
 	width: 450px;
-	display: inline-flex;
+	display: inline-grid;
 	font-size: 30px;
 	
 }
@@ -39,7 +40,6 @@ html, body {
 	background-image: url(../images/titulos.jpg);
 	background-size: cover;
 	color: white;
-	text-align: center;
 }
 
 #copas {
