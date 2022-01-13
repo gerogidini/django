@@ -12,6 +12,7 @@
 	      		<th scope="col">Nombre</th>
 	      		<th scope="col">Apellido</th>
 	      		<th scope="col">Partidos</th>
+	      		<th scope="col">Titulos</th>
 	    	</tr>
 	  	</thead>
 	  	<tbody>
@@ -20,6 +21,9 @@
 	      		<td>{{jugador.nombre}}</td>
 	      		<td>{{jugador.apellido}}</td>
 	      		<td>{{jugador.partidos}}</td>
+	      		<td>{% for titulo in jugador.titulos.all %}
+	      			{{titulo.torneo}} {{titulo.anio}} <br>
+	      		{% endfor %}</td>
 	    	</tr>
 	    	{% endfor %}
 	  	</tbody>
