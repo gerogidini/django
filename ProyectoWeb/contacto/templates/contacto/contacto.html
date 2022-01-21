@@ -1,0 +1,20 @@
+{% extends "WebSeleccion/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div id='fondoHome'>
+	<div id='divContacto'>
+		{% if 'enviado' in request.GET %}
+			<p>¡Mensaje enviado correctamente!</p>
+		{% endif %}
+		<form action="" method="POST">
+			{% csrf_token %}
+			<table style="margin:auto;">{{elFormulario.as_table}}</table>
+			<input type="submit" value="Enviar">
+		</form>
+	</div>
+</div>
+
+{% endblock %}
