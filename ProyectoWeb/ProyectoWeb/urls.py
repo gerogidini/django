@@ -22,6 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="Home"),
     path('jugadores/', views.jugadores, name="Jugadores"),
+    path('agregarJugador/', views.agregarJugador, name="agregarJugador"),
+    path('eliminarJugador/<id>', views.eliminarJugador, name="eliminarJugador"),
     path('titulos/', views.titulos, name="Titulos"),
     path('contacto/', include('contacto.urls')),
 

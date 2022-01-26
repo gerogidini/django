@@ -1,5 +1,7 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, redirect
 from .models import Jugador, Titulo
+from django.contrib import messages
+
 
 # Create your views here.
 
@@ -12,3 +14,25 @@ def jugadores(request):
 
 def titulos(request):
 	return render(request, 'WebSeleccion/titulos.html')
+
+def agregarJugador(request):
+	if request.method == 'POST':
+		nombre = request.POST['nombre']
+		apellido = request.POST['apellido']
+		partidos = request.POST['partidos']
+		campeonatos = request.POST['campeonatos']
+
+		jugador = Jugador.objects.create(nombre = nombre, apellido = apellido, 
+			partidos = partidos)
+		jugador.titulos.add(campeonatos)
+		return redirect("/jugadores")
+
+	titulos = Titulo.objects.all()	
+	return render(request, 'WebSeleccion/agregarJugador.html', {"titulos":titulos})	
+
+def eliminarJugador(request, id):
+	jugador = Jugador.objects.get(id = id)
+	jugador.delete()
+
+	return redirect('/jugadores')
+

@@ -13,6 +13,7 @@
 	      		<th scope="col">Apellido</th>
 	      		<th scope="col">Partidos</th>
 	      		<th scope="col">Titulos</th>
+	      		<th scope="col"></th>
 	    	</tr>
 	  	</thead>
 	  	<tbody>
@@ -24,10 +25,13 @@
 	      		<td>{% for titulo in jugador.titulos.all %}
 	      			{{titulo.torneo}} {{titulo.anio}} <br>
 	      		{% endfor %}</td>
+	      		<td><a href="/eliminarJugador/{{jugador.id}}" class="btn btn-danger">Borrar</a></td>
 	    	</tr>
 	    	{% endfor %}
 	  	</tbody>
     </table>
+
+    <a href="{% url 'agregarJugador' %}"><button>Agregar Jugador</button></a>
 
 </div>
 
