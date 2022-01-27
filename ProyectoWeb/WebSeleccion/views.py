@@ -36,3 +36,23 @@ def eliminarJugador(request, id):
 
 	return redirect('/jugadores')
 
+def edicionJugador(request, id):
+	jugador = Jugador.objects.get(id = id)
+	return render(request, 'WebSeleccion/editarJugador.html', {"jugador":jugador})
+
+def editarJugador(request):
+	clave = request.POST['id']
+	nombre = request.POST['nombre']
+	apellido = request.POST['apellido']
+	partidos = request.POST['partidos']
+
+	jugador = Jugador.objects.get(id = clave)
+	jugador.nombre = nombre
+	jugador.apellido = apellido
+	jugador.partidos = partidos
+
+	jugador.save()
+	return redirect('/jugadores')
+	
+	
+

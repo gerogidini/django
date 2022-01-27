@@ -25,6 +25,7 @@
 	      		<td>{% for titulo in jugador.titulos.all %}
 	      			{{titulo.torneo}} {{titulo.anio}} <br>
 	      		{% endfor %}</td>
+	      		<td><a href="/edicionJugador/{{jugador.id}}" class="btn btn-info">Editar</a></td>
 	      		<td><a href="/eliminarJugador/{{jugador.id}}" class="btn btn-danger">Borrar</a></td>
 	    	</tr>
 	    	{% endfor %}

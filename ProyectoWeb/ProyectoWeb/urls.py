@@ -24,6 +24,8 @@ urlpatterns = [
     path('jugadores/', views.jugadores, name="Jugadores"),
     path('agregarJugador/', views.agregarJugador, name="agregarJugador"),
     path('eliminarJugador/<id>', views.eliminarJugador, name="eliminarJugador"),
+    path('edicionJugador/<id>', views.edicionJugador, name="edicionJugador"),
+    path('editarJugador/', views.editarJugador, name="editarJugador"),
     path('titulos/', views.titulos, name="Titulos"),
     path('contacto/', include('contacto.urls')),
 
